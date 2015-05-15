@@ -16,4 +16,4 @@ USER javadev
 
 ENV HOME /home/javadev
 
-CMD eclipse/eclipse
+CMD ["eclipse/eclipse"]
