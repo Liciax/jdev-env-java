@@ -1,0 +1,28 @@
+java:
+  build: java
+  volumes:
+    - /opt/java   
+
+tomcat:
+  build: tomcat
+  volumes:
+    - /tomcat
+
+eclipsedata:
+  build: eclipse-data
+  volumes:
+    - /home/javadev/data
+eclipse:
+  build: eclipse
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+  volumes_from:
+    - java
+    - tomcat
+    - eclipsedata
+  environment:
+    - JAVA_HOME=/opt/java
+    - PATH=$PATH:$JAVA_HOME/bin
+    - DISPLAY=:0
+  ports:
+    - 8080
