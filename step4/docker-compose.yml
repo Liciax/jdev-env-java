@@ -11,7 +11,7 @@ tomcat:
 eclipsedata:
   build: eclipse-data
   volumes:
-    - /home/javadev/data
+    - /workspace
 eclipse:
   build: eclipse
   volumes:

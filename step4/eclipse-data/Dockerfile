@@ -1,3 +1,3 @@
 FROM busybox:latest
 
-RUN mkdir -p /home/javadev/data
+RUN mkdir /workspace && chmod -R a+rw /workspace
