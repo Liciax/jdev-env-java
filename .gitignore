@@ -7,4 +7,6 @@ step3/tomcat/tomcat-bin
 step4/java/java-bin
 step4/tomcat/tomcat-bin
 step4/eclipse
-
+step5/java/java-bin
+step5/tomcat/tomcat-bin
+step5/eclipse

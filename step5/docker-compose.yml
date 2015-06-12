@@ -1,0 +1,37 @@
+java:
+  build: java
+  volumes:
+    - /opt/java   
+
+mysql:
+  image: mysql:latest
+  environment:
+    - MYSQL_ROOT_PASSWORD=AezohghooNgaegh8ei2jabib2nuj9yoe
+    - MYSQL_DATABASE=cloudunit
+
+tomcat:
+  build: tomcat
+  volumes:
+    - /tomcat
+
+eclipsedata:
+  build: eclipse-data
+  volumes:
+    - /workspace
+
+eclipse:
+  build: eclipse
+  volumes:
+    - /tmp/.X11-unix:/tmp/.X11-unix
+  volumes_from:
+    - java
+    - tomcat
+    - eclipsedata
+  environment:
+    - JAVA_HOME=/opt/java
+    - PATH=$PATH:$JAVA_HOME/bin
+    - DISPLAY=:0
+  ports:
+    - "8080"
+  links:
+    - mysql:mysql
