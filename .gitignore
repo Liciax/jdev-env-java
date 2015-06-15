@@ -6,7 +6,9 @@ step3/java/java-bin
 step3/tomcat/tomcat-bin
 step4/java/java-bin
 step4/tomcat/tomcat-bin
-step4/eclipse
+step4/eclipse/eclipse
+step4/eclipse/.metadata
 step5/java/java-bin
 step5/tomcat/tomcat-bin
-step5/eclipse
+step5/eclipse/eclipse
+step5/eclipse/.metadata
