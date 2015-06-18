@@ -1,19 +1,11 @@
-Commandes nécessaire pour lancer le container eclipse : 
+LANCER PIZZAIOLO
 
-docker run -ti --rm \
-       -e DISPLAY=$DISPLAY \
-       -v /tmp/.X11-unix:/tmp/.X11-unix \
-       eclipse
-
-+ instructions pour docker-compose.yml
-
-- ajout JAVA_HOME=/opt/java pour container eclipse
-- volume entre /opt/java du container eclipse et container java
-- récupérer container officiel mysql
-- link entre tomcat et mysql
-- volume entre tomcat et workspace java
-- externalisation workspace dans un container busybox
-- expose/forward 8080 du tomcat pour accéder à l'appli
-
-
-+ ajout registry officiel + toutes les images buildées à l'intérieur
+- lancer docker-compose up (step 5)
+- dans eclipse : windows>preferences>git changer le chemin du workspace (par /workspace/git)
+- idem dans maven installation : importer une installation externe : /maven et remplacer le settings.xml par celui qui se trouve dans /maven/conf/
+- importer le projet via git (ou à ajouter au volume eclipse si pas internet)
+- importer tomcat comme pour la step 4
+- convertir en projet maven puis dans properties> project facets> runtime (en haut à droite ) choisir tomcat
+- faire un maven update projet
+- ajouter le projet à tomcat et lancer tomcat 
+- done!
