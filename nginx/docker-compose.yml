@@ -1,0 +1,21 @@
+mirrorregistry:
+  image: registry
+  volumes:
+    - /var/lib/treeptik/mirror-registry:/registry
+  environment:
+    - STANDALONE=false
+    - STORAGE_PATH=/registry
+    - MIRROR_SOURCE=https://index.docker.io
+    - MIRROR_SOURCE_INDEX=https://index.docker.io
+    - MIRROR_TAGS_CACHE_TTL=1296000
+  ports:
+    - "5001:5000"
+  restart: always
+
+nginx:
+  image: nginx
+  volumes:
+    - /home/claire/jdev2015/nginx/bin:/usr/share/nginx/html:ro
+  ports:
+    - "80:80"
+  restart: always

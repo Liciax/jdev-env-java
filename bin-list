@@ -1,9 +1,3 @@
-step4/eclipse/.metadata
-step5/java-bin.tar.gz
-step5/tomcat-bin.tar.gz
-step5/eclipse/eclipse-bin.tar.gz
-step5/eclipse/.metadata
-step5/maven/apache-maven.tar.gz
 step1/helloworld.war
 step1/java-bin.tar.gz
 step1/tomcat-bin.tar.gz
@@ -16,4 +10,3 @@ step3/hellowrold.war
 step4/java/java-bin.tar.gz
 step4/tomcat/tomcat-bin.tar.gz
 step4/eclipse/eclipse-bin.tar.gz
-nginx/bin
