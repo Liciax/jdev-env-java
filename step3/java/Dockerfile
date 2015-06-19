@@ -1,3 +1,3 @@
 FROM busybox:latest
 
-ADD java-bin /opt/java
+ADD java-bin.tar /opt

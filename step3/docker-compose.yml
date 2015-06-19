@@ -1,13 +1,13 @@
 java:
   build: java
   volumes:
-    - /opt/java   
+    - /opt/java-bin 
 
 tomcat:
   build: tomcat
   volumes_from: 
     - java
   environment:
-    - JAVA_HOME=/opt/java
+    - JAVA_HOME=/opt/java-bin
   ports:
     - 8080
