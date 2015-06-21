@@ -1,0 +1,22 @@
+mirrorregistry:
+  image: registry:2.0.1
+  volumes:
+    - /home/claire/jdev2015/infra/registry:/registry
+  environment:
+    - SETTINGS_FLAVOR=s3
+    - AWS_BUCKET=mybucket
+    - STORAGE_PATH=/registry
+    - AWS_KEY=myawskey
+    - AWS_SECRET=myawssecret
+    - SEARCH_BACKEND=sqlalchemy
+  ports:
+    - "5000:5000"
+  restart: always
+
+nginx:
+  image: nginx:1.9
+  volumes:
+    - /home/claire/jdev2015/nginx/bin:/usr/share/nginx/html:ro
+  ports:
+    - "80:80"
+  restart: always

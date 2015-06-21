@@ -16,4 +16,4 @@ step3/helloworld.war
 step4/java/java-bin.tar
 step4/tomcat/tomcat-bin.tar
 step4/eclipse/eclipse-bin.tar
-nginx/bin
+infra/bin
