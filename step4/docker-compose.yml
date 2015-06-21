@@ -1,17 +1,24 @@
 java:
   build: java
   volumes:
-    - /opt/java   
+    - /opt/java-bin
+  labels:
+    - "nature=binaries"
 
 tomcat:
   build: tomcat
   volumes:
-    - /tomcat
+    - /tomcat-bin
+  labels:
+    - "nature=binaries"
 
 eclipsedata:
   build: eclipse-data
   volumes:
     - /workspace
+  labels:
+    - "nature=data"
+
 eclipse:
   build: eclipse
   volumes:
@@ -21,8 +28,8 @@ eclipse:
     - tomcat
     - eclipsedata
   environment:
-    - JAVA_HOME=/opt/java
-    - PATH=$PATH:$JAVA_HOME/bin
-    - DISPLAY=:0
+    - DISPLAY
   ports:
     - 8080
+  labels:
+    - "nature=process"

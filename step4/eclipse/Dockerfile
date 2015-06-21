@@ -9,11 +9,14 @@ RUN export uid=1000 gid=1000 && \
     echo "javadev ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/javadev && \
     chmod 0440 /etc/sudoers.d/javadev && \
     chown ${uid}:${gid} -R /home/javadev
-RUN ln -s /workspace /home/javadev/workspace
-USER javadev
 
+USER javadev
 WORKDIR /home/javadev
 
-ADD eclipse eclipse
+RUN ln -s /workspace workspace
+ADD eclipse-bin.tar . 
 
-CMD eclipse/eclipse
+ENV JAVA_HOME /opt/java-bin
+ENV PATH $PATH:$JAVA_HOME/bin
+
+CMD echo "$PATH" && eclipse-bin/eclipse
