@@ -1,6 +1,7 @@
 step4/eclipse/.metadata
-step5/java-bin.tar
-step5/tomcat-bin.tar
+step5/java/java-bin.tar
+step5/tomcat/tomcat-bin.tar
+step5/tomcat/helloworld.war
 step5/eclipse/eclipse-bin.tar
 step5/eclipse/.metadata
 step5/maven/apache-maven.tar
