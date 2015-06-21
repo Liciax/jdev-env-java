@@ -1,3 +1,3 @@
 FROM busybox:latest
 
-ADD apache-maven maven
+ADD apache-maven.tar / 
