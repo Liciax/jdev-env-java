@@ -1,4 +1,4 @@
-mirrorregistry:
+privateregistry:
   image: registry:2.0.1
   volumes:
     - /home/claire/jdev2015/infra/registry:/registry
@@ -16,7 +16,7 @@ mirrorregistry:
 nginx:
   image: nginx:1.9
   volumes:
-    - /home/claire/jdev2015/nginx/bin:/usr/share/nginx/html:ro
+    - /home/claire/jdev2015/infra/bin:/usr/share/nginx/html:ro
   ports:
     - "80:80"
   restart: always
