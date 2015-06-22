@@ -10,6 +10,9 @@ mysql:
   environment:
     - MYSQL_ROOT_PASSWORD=AezohghooNgaegh8ei2jabib2nuj9yoe
     - MYSQL_DATABASE=pizzaiolo2
+  labels:
+    - "nature=process"
+    - "nature=data"
 
 tomcat:
   build: tomcat
@@ -22,6 +25,8 @@ maven:
   build: maven
   volumes:
     - /apache-maven
+  labels:
+    - "nature=binaries"
 
 eclipsedata:
   build: eclipse-data
