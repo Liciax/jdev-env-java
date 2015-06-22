@@ -1,3 +1,5 @@
 FROM busybox:latest
 
-RUN mkdir /workspace && chmod -R a+rw /workspace
+RUN mkdir /workspace
+COPY helloworld /workspace/helloworld
+RUN chmod -R a+rw /workspace

@@ -19,4 +19,4 @@ ADD eclipse-bin.tar .
 ENV JAVA_HOME /opt/java-bin
 ENV PATH $PATH:$JAVA_HOME/bin
 
-CMD echo "$PATH" && eclipse-bin/eclipse
+CMD echo $JAVA_HOME && echo "$PATH" && eclipse-bin/eclipse
