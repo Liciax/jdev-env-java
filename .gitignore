@@ -16,5 +16,6 @@ step3/tomcat/tomcat-bin.tar
 step3/helloworld.war
 step4/java/java-bin.tar
 step4/tomcat/tomcat-bin.tar
-step4/eclipse/eclipse-bin.tar
+step4/eclipse-linux/eclipse-bin.tar
+step4/eclipse-others/eclipse-bin.tar
 infra/bin
