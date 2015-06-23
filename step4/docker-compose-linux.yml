@@ -20,7 +20,7 @@ eclipsedata:
     - "nature=data"
 
 eclipse:
-  build: eclipse
+  build: eclipse-linux
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
   volumes_from:
