@@ -9,10 +9,12 @@ step3/tomcat/tomcat-bin.tar
 step3/tomcat/helloworld.war
 step4/java/java-bin.tar
 step4/tomcat/tomcat-bin.tar
-step4/eclipse/eclipse-bin.tar
 step4/tomcat/helloworld.war
 step5/java/java-bin.tar
 step5/tomcat/tomcat-bin.tar
 step5/eclipse/eclipse-bin.tar
 step5/tomcat/helloworld.war
 step5/maven/apache-maven.tar
+step4/eclipse-linux/eclipse-bin.tar
+step4/eclipse-others/eclipse-bin.tar
+
