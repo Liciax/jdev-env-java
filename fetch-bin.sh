@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BIN_REPO=http://localhost
+BIN_REPO=http://localhost:81
 BIN_LIST=bin-list
 
 while read FILE; do

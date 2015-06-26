@@ -1,7 +1,7 @@
 privateregistry:
   image: registry:2.0.1
   volumes:
-    - /home/claire/jdev2015/infra/registry:/registry
+    - /home/guillaume/presentations/jdev2015/infra/registry:/registry
   environment:
     - SETTINGS_FLAVOR=s3
     - AWS_BUCKET=mybucket
@@ -16,7 +16,7 @@ privateregistry:
 nginx:
   image: nginx:1.9
   volumes:
-    - /home/claire/jdev2015/infra/bin:/usr/share/nginx/html:ro
+    - /home/guillaume/presentations/jdev2015/infra/bin:/usr/share/nginx/html:ro
   ports:
-    - "80:80"
+    - "81:80"
   restart: always
