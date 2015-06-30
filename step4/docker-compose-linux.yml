@@ -2,22 +2,16 @@ java:
   build: java
   volumes:
     - /opt/java-bin
-  labels:
-    - "nature=binaries"
 
 tomcat:
   build: tomcat
   volumes:
     - /tomcat-bin
-  labels:
-    - "nature=binaries"
 
 eclipsedata:
   build: eclipse-data
   volumes:
     - /workspace
-  labels:
-    - "nature=data"
 
 eclipse:
   build: eclipse-linux
@@ -31,5 +25,3 @@ eclipse:
     - DISPLAY
   ports:
     - 8080
-  labels:
-    - "nature=process"

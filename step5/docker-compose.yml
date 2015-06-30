@@ -2,15 +2,11 @@ java:
   build: java
   volumes:
     - /opt/java-bin
-  labels:
-    - "nature=binaries"
 
 mysqldata:
   image: busybox:latest
   volumes:
     - /var/lib/mysql
-  labels:
-    - "nature=data"
 
 mysql:
   image: mysql:5.7
@@ -19,32 +15,24 @@ mysql:
     - MYSQL_DATABASE=pizzaiolo2
   volumes_from:
     - mysqldata
-  labels:
-    - "nature=process"
 
 tomcat:
   build: tomcat
   volumes:
     - /tomcat-bin
-  labels:
-    - "nature=binaries"
 
 maven:
   build: maven
   volumes:
     - /apache-maven
-  labels:
-    - "nature=binaries"
 
 eclipsedata:
   build: eclipse-data
   volumes:
     - /workspace
-  labels:
-    - "nature=data"
 
 eclipse:
-  build: eclipse
+  image: 192.168.1.2:5000/eclipse
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
   volumes_from:
@@ -58,5 +46,3 @@ eclipse:
     - "8080"
   links:
     - mysql:mysql
-  labels:
-    - "nature=process"
