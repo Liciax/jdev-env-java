@@ -1,0 +1,59 @@
+java:
+  build: java
+  volumes:
+    - /opt/java-bin
+  labels:
+    - "nature=binaries"
+
+mysqldata:
+  image: busybox:latest
+  volumes:
+    - /var/lib/mysql
+  labels:
+    - "nature=data"
+
+mysql:
+  image: mysql:5.7
+  environment:
+    - MYSQL_ROOT_PASSWORD=changed
+    - MYSQL_DATABASE=pizzaiolo2
+  volumes_from:
+    - mysqldata
+  labels:
+    - "nature=process"
+
+tomcat:
+  build: tomcat
+  volumes:
+    - /tomcat-bin
+  labels:
+    - "nature=binaries"
+
+maven:
+  build: maven
+  volumes:
+    - /apache-maven
+  labels:
+    - "nature=binaries"
+
+eclipsedata:
+  build: eclipse-data
+  volumes:
+    - /workspace
+  labels:
+    - "nature=data"
+
+eclipseotheros:
+  build: eclipse-otheros
+  volumes_from:
+    - java
+    - tomcat
+    - eclipsedata
+    - maven
+  ports:
+    - "8081:8080"
+    - "5900:5900"
+  links:
+    - mysql:mysql
+  labels:
+    - "nature=process"

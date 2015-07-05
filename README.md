@@ -1,3 +1,5 @@
+Note: This will be working by the end of the week but is not functionning yet.
+
 # A java development environment with eclipse, in a few docker containers !
 
 Eclipse, java, tomcat, mysql and maven in a few docker containers so that you can develop on any docker host.
@@ -8,3 +10,5 @@ Eclipse, java, tomcat, mysql and maven in a few docker containers so that you ca
 * Docker compose 1.3.x
 
 ## Quickstart
+
+
