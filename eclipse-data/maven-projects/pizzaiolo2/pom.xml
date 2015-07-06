@@ -4,7 +4,6 @@
 	<groupId>fr.treeptik</groupId>
 	<artifactId>pizzaiolo2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 
 	<dependencies>
 
@@ -68,4 +67,5 @@
 		</plugins>
 	</build>
 
+	<packaging>war</packaging>
 </project>

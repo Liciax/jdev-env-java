@@ -1,6 +1,7 @@
 FROM ubuntu:14.04
 
 RUN apt-get update && apt-get install -y libgtk2.0-0 libcanberra-gtk-module libxext-dev libxrender-dev libxtst-dev
+ADD eclipse-bin.tar /
 
 RUN export uid=1000 gid=1000 && \
     mkdir -p /home/javadev && \
@@ -13,10 +14,7 @@ RUN export uid=1000 gid=1000 && \
 USER javadev
 WORKDIR /home/javadev
 
-RUN ln -s /workspace workspace
-ADD eclipse-bin.tar . 
-
 ENV JAVA_HOME /opt/java-bin
 ENV PATH $PATH:$JAVA_HOME/bin
 
-CMD eclipse-bin/eclipse
+CMD /eclipse-bin/eclipse

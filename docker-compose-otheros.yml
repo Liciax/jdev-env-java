@@ -37,11 +37,13 @@ maven:
     - "nature=binaries"
 
 eclipsedata:
-  build: eclipse-data
+  image: busybox:latest 
   volumes:
-    - /workspace
+    - eclipse-data/maven-projects:/home/javadev/workspace/maven-projects
+    - /home/javadev/workspace
   labels:
     - "nature=data"
+  command: chown -R 1000:1000 /home/javadev/workspace
 
 eclipseotheros:
   build: eclipse-otheros
@@ -50,6 +52,8 @@ eclipseotheros:
     - tomcat
     - eclipsedata
     - maven
+  environment:
+    - WORKSPACE=/home/javadev/workspace
   ports:
     - "8081:8080"
     - "5900:5900"
