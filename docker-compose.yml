@@ -1,5 +1,5 @@
 java:
-  build: java
+  image: cwahl/jdev-java
   volumes:
     - /opt/java-bin
   labels:
@@ -23,21 +23,21 @@ mysql:
     - "nature=process"
 
 tomcat:
-  build: tomcat
+  image: cwahl/jdev-tomcat
   volumes:
     - /tomcat-bin
   labels:
     - "nature=binaries"
 
 maven:
-  build: maven
+  image: cwahl/jdev-maven
   volumes:
     - /apache-maven
   labels:
     - "nature=binaries"
 
 eclipsedata:
-  image: busybox:latest 
+  image: cwahl/jdev-eclipse-data
   volumes:
     - eclipse-data/maven-projects:/home/javadev/workspace/maven-projects
     - /home/javadev/workspace
@@ -45,8 +45,8 @@ eclipsedata:
     - "nature=data"
   command: chown -R 1000:1000 /home/javadev/workspace
 
-eclipselinux:
-  build: eclipse
+eclipse:
+  image: cwahl/jdev-eclipse
   volumes:
     - /tmp/.X11-unix:/tmp/.X11-unix
   volumes_from:
