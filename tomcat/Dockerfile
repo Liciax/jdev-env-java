@@ -27,3 +27,4 @@ RUN set -x \
 	&& tar -xvf tomcat.tar.gz -C tomcat-bin --strip-components=1 \
 	&& rm tomcat-bin/bin/*.bat \
 	&& rm tomcat.tar.gz*
+RUN chown 1000:1000 -R /tomcat-bin
