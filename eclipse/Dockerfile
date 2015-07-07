@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM buildpack-deps:jessie-curl
 
 RUN mkdir -p /eclipse-bin
 RUN apt-get update && apt-get install -y libgtk2.0-0 libcanberra-gtk-module libxext-dev libxrender-dev libxtst-dev \
