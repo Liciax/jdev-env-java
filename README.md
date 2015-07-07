@@ -31,7 +31,7 @@ Finally, mysql and eclipse are also provided in two distinct (linked) containers
 * [mysql](https://www.mysql.fr/) (5.7)
 * and [eclipse](https://eclipse.org/downloads/) (luna JEE).
 
-![alt tag](https://github.com/cwahl-Treeptik/jdev-env-java/blob/master/javadev.eps)
+![alt tag](https://github.com/cwahl-Treeptik/jdev-env-java/blob/master/javadev.png)
 
 As you will see, a simple application using a mysql database is already [deployed](http://localhost:8081/pizzaiolo2/pizzas). You can access it at:
 http://localhost:8081/pizzaiolo2/pizzas
