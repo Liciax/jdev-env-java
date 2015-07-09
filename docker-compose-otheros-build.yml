@@ -1,5 +1,5 @@
 java:
-  image: cwahl/jdev-java
+  build: java
   volumes:
     - /opt/java-bin
   labels:
@@ -15,7 +15,7 @@ mysqldata:
 mysql:
   image: mysql:5.7
   environment:
-    - MYSQL_ROOT_PASSWORD=changeme
+    - MYSQL_ROOT_PASSWORD=changed
     - MYSQL_DATABASE=pizzaiolo2
   volumes_from:
     - mysqldata
@@ -23,21 +23,21 @@ mysql:
     - "nature=process"
 
 tomcat:
-  image: cwahl/jdev-tomcat
+  build: tomcat
   volumes:
     - /tomcat-bin
   labels:
     - "nature=binaries"
 
 maven:
-  image: cwahl/jdev-maven
+  build: maven
   volumes:
     - /apache-maven
   labels:
     - "nature=binaries"
 
 eclipsedata:
-  image: cwahl/jdev-eclipse-data-otheros
+  image: cwahl/jdev-eclipse-data
   volumes:
     - eclipse-data/maven-projects:/home/javadev/workspace/maven-projects
     - /home/javadev/workspace
@@ -46,7 +46,7 @@ eclipsedata:
   command: chown -R 1000:1000 /home/javadev/workspace
 
 eclipse:
-  image: cwahl/jdev-eclipse-otheros
+  build: eclipse-otheros
   volumes_from:
     - java
     - tomcat

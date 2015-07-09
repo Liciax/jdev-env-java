@@ -1,5 +1,3 @@
-Note: This will be working by the end of the week but is not functionning yet.
-
 # A java development environment with eclipse as an IDE, in a few docker containers !
 
 Eclipse, java, tomcat, mysql and maven in a few docker containers so that you can develop on any docker host.
