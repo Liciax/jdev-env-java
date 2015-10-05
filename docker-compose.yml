@@ -39,7 +39,7 @@ maven:
 eclipsedata:
   image: cwahl/jdev-eclipse-data
   volumes:
-    - eclipse-data/maven-projects:/home/javadev/workspace/maven-projects
+    - ./eclipse-data/maven-projects:/home/javadev/workspace/maven-projects
     - /home/javadev/workspace
   labels:
     - "nature=data"
