@@ -51,7 +51,7 @@ The eclipse IDE is added to our setup. It will be split into 2 containers:
 Depending on wether you use linux or not, use either the `docker-compose-linux.yml` or the `docker-compose-otheros.yml` file.
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose-linux.yml up -d
 ```
 
 * Select `/home/javadev/workspace` as a workspace
