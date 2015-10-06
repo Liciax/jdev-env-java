@@ -61,3 +61,5 @@ docker-compose -f docker-compose-linux.yml up -d
 * Select the server and import an existing Maven Project, with the root directory `/workspace/helloworld`
 * Add the helloworld project to the server
 * Restart the server
+
+On MacOS, you have to launch a vnc client on port 5900. Please have a look at the 'Quickstart on MacOS' section in the [readme](https://github.com/cwahl-Treeptik/jdev-env-java/blob/master/README.md).
