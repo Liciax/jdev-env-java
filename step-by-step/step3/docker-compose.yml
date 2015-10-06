@@ -1,0 +1,20 @@
+java:
+  build: java
+  volumes:
+    - /opt/java-bin 
+
+tomcat:
+  build: tomcat
+  volumes: 
+    - /tomcat-bin
+
+process:
+  image: ubuntu:12.04
+  volumes_from:
+    - java
+    - tomcat
+  environment:
+    - JAVA_HOME=/opt/java-bin
+  ports:
+    - 8080
+  command: /tomcat-bin/bin/catalina.sh run
