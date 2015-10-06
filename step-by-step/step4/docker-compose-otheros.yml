@@ -19,8 +19,8 @@ eclipsedata:
   labels:
     - "nature=data"
 
-eclipse:
-  build: eclipse-others
+eclipseotheros:
+  build: eclipse-otheros
   volumes_from:
     - java
     - tomcat
