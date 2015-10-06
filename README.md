@@ -2,6 +2,8 @@
 
 Eclipse, java, tomcat, mysql and maven in a few docker containers so that you can develop on any docker host.
 
+A [step by step guide](https://github.com/cwahl-Treeptik/jdev-env-java/blob/master/STEPBYSTEP.md) is also available.
+
 ## Requirements
 
 * Docker 1.6.x
